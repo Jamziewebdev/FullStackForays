@@ -1,0 +1,143 @@
+<!-- Webbutveckling 2. December/Januari 2023-2024. -->
+<!DOCTYPE html>
+<html lang="sv-SE">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/webbutveckling2/style.css">
+    <link rel="stylesheet" href="/webbutveckling2/print.css" type="text/css" media="print">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Presentation - James Ziegler</title>    
+    <!-- Funktion som hämtar rätt beskrivning utifrån vilken sida man är på -->
+    <meta name="description" content="Här kan du läsa mer om mig och mitt webb-intresse.">
+    <!-- Källor till jQuerys-->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <!-- Denna overlay är tillagd 20241012 i samband med infogandet av sidan till min nya webbplats -->
+    <div id="overlay">
+        <div id="text">
+            <h1>Webbutveckling 2</h1><div id="closeBtn" onclick="off()"><i class="fa fa-window-close"></i></div><p>Detta är en sida från den andra av de lite mer omfattande 
+            webbplatsen som jag skapat. Jag gjorde den under kursen webbutveckling 2 på komvux
+            och den skapades med hjälp av WordPress. Eviga problem med XAMPP gjorde dock att jag 
+            förlorade den fullständiga webbplatsen, men jag hade som tur var ändå ett par statiska sidor
+            sparade. Webbplatsen är skapad för att vara responsiv på flertalet olika enheter och jag
+            utgick ifrån WCAGs riktlinjer när jag byggde sidan. Jag implementerade även ett antal javascript
+            för bättre funktionalitet, samt testade vattnet lite vad gäller SEO. </p>
+        </div>
+    </div>
+    <div id="buttonBox">
+        <button id="openBtn" onclick="on()"><i class="fa fa-info-circle" ></i> Information</button>
+        <button id="backBtn" onclick="history.back()"><i class="fa fa-home"></i> Föregående sida</button>
+    </div>
+        
+    <div id="wrapper">
+        <header role="banner">
+            <div>
+                <div id="headerImage1"><a href="#"><img src="/webbutveckling2/img/Logotyp.svg" height="200" alt="Fullstor logotyp, två trianglar omslutna av en cirkel, bredvid namnet James Ziegler"></a></div>
+                <div id="headerImage2"><a href="#"><img src="/webbutveckling2/img/Ikon.svg" height="100" alt="Mellanstor logotyp, två trianglar omslutna av en cirkel, bredvid namnet James Ziegler"></a></div>
+                <div id="headerImage3"><a href="#"><img src="/webbutveckling2/img/Ikon.svg" height="30" alt="Liten ikon, två trianglar omslutna av en cirkel"></a></div>
+            </div>
+        </header>
+            <nav role="navigation">
+                <!-- Skapar klassen 'menyikon'. Denna ikon dyker upp på skärmar mindre än 768 pixlar. Tre tomma 'divvar' finns i den för att 
+                jag ska kunna stajla dessa som streck i ikonen. -->
+                <div class="menyikon">
+                <div></div>
+                <div></div>
+                <div></div>
+                </div>
+                <ul>
+                    <!-- Skapar enskilda listpunkter med länkar för varje sida på min WordPress-->
+                    <!-- Anropar WordPress-funktionen 'wp_list_pages()', som genererar en lista över de sidor
+                    som finns på min WordPress-webbplats, och inkluderar dem som länkar i navigationsmenyn. 
+                    '&title_li=' tar bort rubriken 'sidor' som normalt skulle ha visats i början på menyn. 'exclude' tar bort sida 47, från menyn, vilket är
+                    tack-sidan för formuläret, dit man inte ska kunna komma på annat sätt än genom att fylla i formuläret. -->
+                    <li class="page_item page-item-28"><a href="#">Hem</a></li>
+                    <li class="page_item page-item-30"><a href="#">Artiklar</a></li>
+                    <li class="page_item page-item-32 page_item_has_children current_page_item"><a href="#/" aria-current="page">Presentation</a>
+                        <ul class='children'>
+                            <li class="page_item page-item-34"><a href="#">CV</a></li>
+                        </ul>
+                    </li>
+                    <li class="page_item page-item-36 page_item_has_children"><a href="#">Gallerier</a>
+                        <ul class='children'>
+                            <li class="page_item page-item-38"><a href="#">Digitalt skapande 1</a></li>
+                            <li class="page_item page-item-40"><a href="#">Digitalt skapande 2</a></li>
+                        </ul>
+                    </li>
+                    <li class="page_item page-item-42 page_item_has_children"><a href="#">Tidigare projekt</a>
+                        <ul class='children'>
+                            <li class="page_item page-item-44"><a href="#">Webbutveckling 1</a></li>
+                        </ul>
+                    </li>
+                    <li class="page_item page-item-46"><a href="#">Kontakt</a></li>
+                </ul>
+            </nav>
+        <div class="main" role="main">
+            <div id="content" role="main">
+                <article role="article">
+                    <header><h1>Presentation</h1></header>
+                    <section role="region" aria-label="Huvudinnehåll">
+                        <h2>Vem är jag?</h2>
+                        <hr>
+                            <p><img src="/webbutveckling2/img/James_filter.jpg" class="presentation" alt="James, bild till presentation. James har lockigt hår och fyrkantiga glasögon" width="300" height="533"></p>
+                        <h3>Just nu:</h3>
+                            <p>Dags för en liten presentation! Mitt namn är, som ni kanske har gissat, James Ziegler. Jag är 26 år gammal, och bor i Linköping. Mitt intresse för webbutveckling och design började år 2022, och har utvecklats i raketfart sedan dess! Förutom ett intresse för webbutveckling och design så tycker jag mycket om att läsa och skriva. Jag tycker även om att laga mat och baka, och älskar att bjuda människor i min omgivning på något jag har skapat.</p>
+                            <p>Jag är envis, målinriktad, analytisk och lösningsorienterad. Något jag uppskattar enormt mycket med mig själv är att jag har en förmåga att inte ge upp när något är svårt, jag försöker bara lite hårdare. Det är förstås även någonting som jag ibland skulle behöva tona ned &#8212; men det är för det mesta en stor fördel!</p>
+                        <h3>Snart:</h3>
+                            <p>Jag har snart klarat av alla mina kurser på komvux, efter nästan en evighet. Mest relevanta är nog programmering 1, <a href="#">webbutveckling 1</a>, <a href="#">digitalt skapande 1</a> och <a href="#">digitalt skapande 2.</a> Och så förstås webbutveckling 2 som jag läser just nu. Framöver kommer jag även att läsa kurserna Webbserverprogrammering 1, CAD 1, Gränssnittsdesign, Grafisk Illustration. Samt göra ett komvuxarbete med fokus inom något av ovanstående.</p>
+                        <h3>Framtiden:</h3>
+                            <p>Efter att dessa kurser är färdiga kommer jag att ha en komvuxexamen mot samhälle och humaniora, med störst fokus på IT, webb och design/skapande. Jag planerar därefter att läsa en kortare yrkesutbildning på en termin, inom webbutveckling. Detta för att ha en mer formell utbildning inom det jag vill jobba med i framtiden. Under min sista studietid planerar jag emellertid att försöka ta på mig några frilansuppdrag, inom design såväl som webbutveckling. Detta tänkte jag göra till stor del som övning, men också som efterforskningar för att se om det vore något för mig att starta ett eget företag i framtiden.</p>
+                            <p>&nbsp;</p>
+                            <p>Kolla gärna in mina mest lyssnade låtar för 2023:<br />
+                            <iframe loading="lazy" style="border-radius: 12px;" src="https://open.spotify.com/embed/playlist/6OjxOhUkLGQjstsiXeZyTp?utm_source=generator" width="500" height="500" allowfullscreen="allowfullscreen" aria-label="Spotify player"></iframe></p>
+                    </section>
+                </article>  
+            </div>
+        <aside>
+            <section role="region" aria-label="Länkar till andra delar av webbplatsen">
+                <h4>Läs mitt CV här:</h4>
+                    <a href="#">CV James Ziegler</a>
+            </section>
+            <section role="region" aria-label="Mina favoritinlägg">
+                <h4>Några av mina favoritinlägg:</h4>
+                    <ul>
+                        <li><a href="#">Att göra en UFO-rulle</a></li>
+                        <li><a href="#">Att fota med mobilkamera</a></li>
+                        <li><a href="#">Att skapa min första webbplats</a></li>
+                    </ul>
+            </section>
+        </aside>
+        </div>
+        <footer role="contentinfo">
+            <div>
+            <a href="#"><img src="/webbutveckling2/img/Ikon.svg" height="50" alt="Ikon, cirkel med två trianglar i"></a>
+                <p>James Ziegler, 2023</p>
+                <!-- Lägger till en länk som öppnar utskrifts-dialogrutan vid klick. Genom denna
+                får användaren tillgång till en utskriftsvänlig version av det innehåll den ser. Ger diven rollen 'complementary' för att underlätta för skärmläsare-->
+                <div id="print" role="complementary">
+                    <a href="javascript:void(0);" onclick="window.print();" class="print-link"><img src="/webbutveckling2/img/print.png" width="20" alt="Utskriftsikon"> Skriv ut</a>
+                </div>
+                <p id="datum"></p>
+            </div>
+        </footer>
+    </div>
+    <button onclick="topFunction()" id="myBtn" title="Go to top" role="button" aria-label="Upp">Upp ↑</button>
+    <script src="/webbutveckling2/script.js"></script>
+    <script src="/webbutveckling2/script2.js"></script>
+    <script src="/webbutveckling2/script3.js"></script>
+    <script src="/webbutveckling2/script4.js"></script>
+    <script src="/webbutveckling2/script5.js"></script>
+    <!-- Tillagt 20241012 -->
+    <script>
+        function on() {
+            document.getElementById("overlay").style.display = "block";
+        }
+        function off() {
+            document.getElementById("overlay").style.display = "none";
+        }
+    </script>
+</body>
+</html>

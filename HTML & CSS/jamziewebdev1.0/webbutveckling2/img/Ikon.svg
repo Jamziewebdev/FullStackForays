@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Lager_1" data-name="Lager 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 261.11 223.98">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#Namnlös_övertoning_37);
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4 {
+        stroke-width: 0px;
+      }
+
+      .cls-2 {
+        fill: url(#Namnlös_övertoning_8);
+      }
+
+      .cls-3 {
+        fill: url(#Namnlös_övertoning_12);
+      }
+
+      .cls-4 {
+        fill: url(#Namnlös_övertoning_28);
+      }
+    </style>
+    <linearGradient id="Namnlös_övertoning_8" data-name="Namnlös övertoning 8" x1="13.07" y1="64.17" x2="161.04" y2="115.12" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#7b7402"/>
+      <stop offset=".09" stop-color="#867f17"/>
+      <stop offset=".28" stop-color="#a39e4e"/>
+      <stop offset=".55" stop-color="#d0cea6"/>
+      <stop offset=".8" stop-color="#fff"/>
+    </linearGradient>
+    <linearGradient id="Namnlös_övertoning_12" data-name="Namnlös övertoning 12" x1="109.56" y1="103.06" x2="255.39" y2="153.28" gradientUnits="userSpaceOnUse">
+      <stop offset=".16" stop-color="#fff"/>
+      <stop offset=".47" stop-color="#c9c698"/>
+      <stop offset=".73" stop-color="#9f9a47"/>
+      <stop offset=".91" stop-color="#857e15"/>
+      <stop offset="1" stop-color="#7b7402"/>
+    </linearGradient>
+    <linearGradient id="Namnlös_övertoning_37" data-name="Namnlös övertoning 37" x1="19.48" y1="42.78" x2="233.64" y2="42.78" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#7b7402"/>
+      <stop offset=".06" stop-color="#80790c"/>
+      <stop offset=".17" stop-color="#8f8929"/>
+      <stop offset=".32" stop-color="#a8a358"/>
+      <stop offset=".49" stop-color="#cac799"/>
+      <stop offset=".69" stop-color="#f4f4eb"/>
+      <stop offset=".73" stop-color="#fff"/>
+      <stop offset=".76" stop-color="#fbfbf8"/>
+      <stop offset=".79" stop-color="#f2f1e6"/>
+      <stop offset=".83" stop-color="#e2e0c7"/>
+      <stop offset=".88" stop-color="#ccc99d"/>
+      <stop offset=".92" stop-color="#b0ac68"/>
+      <stop offset=".97" stop-color="#8e8827"/>
+      <stop offset="1" stop-color="#7b7402"/>
+    </linearGradient>
+    <linearGradient id="Namnlös_övertoning_28" data-name="Namnlös övertoning 28" x1="18.85" y1="175.88" x2="239.2" y2="175.88" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#7b7402"/>
+      <stop offset=".04" stop-color="#908a2b"/>
+      <stop offset=".09" stop-color="#ada962"/>
+      <stop offset=".15" stop-color="#c6c392"/>
+      <stop offset=".2" stop-color="#dad8b9"/>
+      <stop offset=".25" stop-color="#eae9d7"/>
+      <stop offset=".31" stop-color="#f5f5ed"/>
+      <stop offset=".36" stop-color="#fcfcfa"/>
+      <stop offset=".4" stop-color="#fff"/>
+      <stop offset=".5" stop-color="#ecebda"/>
+      <stop offset=".72" stop-color="#bbb87e"/>
+      <stop offset="1" stop-color="#7b7402"/>
+    </linearGradient>
+  </defs>
+  <polygon class="cls-2" points="90.97 180.45 0 108.53 156 23.92 90.97 180.45"/>
+  <polygon class="cls-3" points="170.13 34.46 261.11 106.38 105.11 190.99 170.13 34.46"/>
+  <path class="cls-1" d="m138.35.31c-42.31-2.94-70.68,15.47-87.03,31.43-18.27,17.84-29.3,40.36-31.85,53.82l5.45-3C32.14,56.57,67.44.02,138.03,4.92c44.55,3.09,76.73,36,88.5,62.08l7.1,5.5c-4.85-14.89-16.32-31.42-30.76-44.29C189.89,16.62,168.14,2.38,138.35.31Z"/>
+  <path class="cls-4" d="m234.32,130.14c-3.71,29.62-41.29,95.38-115.48,88.75-45.73-4.09-82.92-35.58-94.21-79.07l-5.78-4.38c9.96,48.23,49.96,83.61,99.58,88.05,42.8,3.83,71.6-15.51,88.23-32.4,20.06-20.38,30.71-45.51,32.37-61.41l.17-1.89h-.01s-4.86,2.36-4.86,2.36Z"/>
+</svg>

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="sv-SE">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="/webbutveckling1/style.css" rel="stylesheet">
+    <link href="/webbutveckling1/print.css" rel="stylesheet" type="text/css" media="print">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>
+        James webbsida
+    </title>
+    <!-- Källa till jQuery-funktioner i script3.js -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div id="overlay">
+        <div id="text">
+            <h1>Webbutveckling 1</h1><div id="closeBtn" onclick="off()"><i class="fa fa-window-close"></i></div>
+            <p>Det här är en sida från den första mer seriösa webbplatsen jag någonsin skapade i kursen Webbutveckling 1 på komvux. 
+            Jag har lämnat all HTML och CSS orörd, förutom denna overlay som jag lagt på för att berätta lite mer om sidan på ett snyggt
+            sätt. Men för att ge en rättvis bild av vad jag kunde då, fick jag inte göra några fler förändringar. Något som var riktigt svårt måste
+            jag erkänna. Även om sidan är tänkt att vara responsiv finns det många aspekter som skulle kunna förbättrast, inte minst när det kommer
+            till bildstorlekar, SEO och laddningstider.</p>
+        </div>
+    </div>
+    <div id="buttonBox">
+        <button id="openBtn" onclick="on()"><i class="fa fa-info-circle" ></i> Information</button>
+        <button id="backBtn" onclick="history.back()"><i class="fa fa-home"></i> Föregående sida</button>
+    </div>
+    <div id="wrapper">
+        <header>
+            <div>
+                <a href="#"><img src="/webbutveckling1/img/headerlogga5-2.png" height="200"
+alt="Företagslogotyp 'Ziegler' handskrivet och 'media', skrivet med en pixlig font, på suddig lila bakgrund som matchar resten av sidans färgtema"></a>
+            </div>
+        </header>
+        <nav>
+    <ul>
+        <!-- Skapar enskilda listpunkter med länkar för varje sida på min WordPress, sedan 
+        använder jag php-koden 'echo home_url();' som anropar en WordPress-funktion som hämtar en 
+        länk som leder till startsidan på min webbsida. -->
+        <li class="page_item"><a href="#">Hem</a></li>
+        <!-- Anropar WordPress-funktionen 'wp_list_pages()', som genererar en lista över de sidor
+        som finns på min WordPress-webbplats, och inkluderar dem som länkar i navigationsmenyn. 
+        '&title_li=' tar bort rubriken 'sidor' som normalt skulle ha visats i början på menyn. -->
+        <li class="page_item page-item-24"><a href="#/">Presentation</a></li>
+        <li class="page_item page-item-28 page_item_has_children current_page_ancestor current_page_parent"><a href="#">Webben ↓</a>
+            <ul class='children'>
+                <li class="page_item page-item-35"><a href="#">Internets historia och samhällspåverkan</a></li>
+                <li class="page_item page-item-158 current_page_item"><a href="#" aria-current="page">Webbtekniker</a></li>
+                <li class="page_item page-item-37"><a href="#">Etik och integritet på internet</a></li>
+                <li class="page_item page-item-51"><a href="#">Källor</a></li>
+            </ul>
+        </li>
+        <li class="page_item page-item-30"><a href="#">Kontakt</a></li>
+    </ul>
+        </nav>
+        <div class="main">     
+            <div id="content">
+                <article>
+                    <header><h1>Webbtekniker</h1></header>
+                    <section>
+                        <section>
+                            <h2 style="text-align: left;">Att skapa en egen webbsida</h2>
+                                <hr />
+                                <p style="text-align: left;">Vill du också starta din egen webbsida? Det är ganska klurigt ibland, men jag tror du kan klara det! Läs vidare här för en grundläggande genomgång av en del viktiga begrepp. Därefter går vi igenom hur du kommer igång med WordPress!</p>
+                        </section>
+                        <section>
+                            <h3 style="text-align: left;"><strong>Webbpubliceringssystem</strong></h3>
+                                <p>Ett webbpubliceringssystem är en programvara som används för att skapa, hantera och publicera innehåll på webben. Det gör det möjligt för användare att skapa och organisera text, bilder, videor och andra medieelement på sina webbplatser utan att behöva koda från grunden. Ett exempel på ett populärt webbpubliceringssystem är WordPress, som erbjuder et användarvänlig gränssnitt för att bygga och underhålla webbplatser.</p>
+                            <h3 style="text-align: left;"><strong>Webbserver</strong></h3>
+                                <p>En webbserver är en dator eller en programvara som lagrar webbsidor, filer och andra resurser och gör dem tillgängliga för användare över internet. När någon skriver in en webbadress i sin webbläsare begär webbläsaren dessa resurser från webbservern, som svarar genom att skicka över de begärda sidorna till användaren.</p>
+                            <h3 style="text-align: left;"><strong>Domännamn</strong></h3>
+                                <p>Ett domännamn är den läsbara adress som ses av användaren, som används för att nå en webbplats på internet. Det fungerar som en översättning av en IP-adress till något mer minnesvärt. Till exempel är &#8220;google.com&#8221; ett domännamn som leder till Googles webbplats. Man kan antingen köpa en egen domän, och få en adress som slutar enbart på t.ex. .se eller .com, men man kan också välja att skapa en gratisdomän via t.ex. WordPress.com, då måste adressen alltid sluta på WordPress.com.</p>
+                            <h3 style="text-align: left;"><strong>IP-adress</strong></h3>
+                                <p>En IP-adress (Internet Protocol address) är en unik numerisk identifierare som tilldelas varje enhet som är ansluten till internet. Den fungerar som enhetens &#8220;digitala adress&#8221; som används för att dirigera data till och från rätt plats på internet. Det finns två huvudtyper av IP-adresser: IPv4, som använder en 32-bitars sekvens av nummer, och IPv6, som använder en 128-bitars sekvens av nummer för att hantera den växande mängden enheter som är anslutna till internet. IPv4 är den ursprungliga versionen av IP, och har 4,3 miljarder unika adresser, men behovet för nya IP-adresser är ständigt ökande och IPv4 kommer helt enkelt inte att räcka till. Den nyare versionen, IPv6, har däremot 2¹²⁸, eller 340 282 366 920 938 463 463 374 607 431 768 211 456. Med andra ord kommer det att dröja innan IPv6-adresserna tar slut.</p>
+                            <h3 style="text-align: left;"><strong>Webbplats</strong></h3>
+                                <p>En webbplats är en samling av webbsidor och digitalt innehåll som är anslutna genom länkar. En webbplats kan innehålla text, bilder, videor och andra medieformat som är organiserade på olika sidor för att informera, underhålla eller interagera med användare som besöker den via webbläsare. Ofta använder man felaktigt ordet hemsida om en hel webbplats, medan hemsida egentligen syftar till själva huvudsidan, den man först kommer till när man skrivit in en webbadress.</p>
+                            <h3 style="text-align: left;"><strong>WordPress.org och WordPress.com</strong></h3>
+                                <p>WordPress är ett populärt webbpubliceringssystem med två huvudsakliga varianter: WordPress.org och WordPress.com. WordPress.org är den öppna källkodsplattformen som användare själva kan ladda ner, installera och anpassa på egna webbservrar. WordPress.com är en värdtjänst som erbjuder en enklare lösning där användare kan skapa och hantera sina webbplatser utan att behöva hantera teknisk underhåll.</p>
+                            <h3 style="text-align: left;"><strong>Backend och frontend</strong></h3>
+                                <p>Backend och frontend refererar till de två huvudsakliga delarna av en webbapplikation. Frontend är den del som användare interagerar med direkt genom webbläsaren. Den omfattar användargränssnittet, designen och all interaktiv funktionalitet. Backend är den osynliga delen som hanterar serverlogik, databasåtkomst och behandlar de förfrågningar som kommer från frontend. Backendsystemet är ansvarigt för att förse frontend med nödvändiga data och funktioner.</p>
+                        </section>
+                        <section>
+                            <h2>Att skapa en första webbsida med hjälp av WordPress</h2>
+                                <hr />
+                                <p>Först av allt behöver vi gå igenom hur du gör för att skaffa WordPress.</p>
+                                <p><strong>Steg 1: Ladda ned MAMP eller XAMPP:</strong></p>
+                                <p>För att köra WordPress lokalt på din Windows-dator behöver du en lokal servermiljö. Två vanliga alternativ är MAMP (för Mac, Apache, MySQL, PHP) eller XAMPP (för flera plattformar, inklusive Windows).</p>
+                                <p><strong>Steg 2: Installera MAMP eller XAMPP:</strong></p>
+                                <p>Starta installationsprocessen för MAMP eller XAMPP och följ anvisningarna i installationsguiden.</p>
+                                <p><strong>Steg 3: Starta din lokala server:</strong></p>
+                                <p>När installationen är klar, starta MAMP eller XAMPP. Det kommer att starta en lokal Apache-webbserver och en MySQL-databasserver på din dator.</p>
+                                <p><strong>Steg 4: Ladda ned WordPress:</strong><br />
+                                Gå till den officiella webbplatsen för WordPress på wordpress.org och ladda ned den senaste versionen av WordPress som en ZIP-fil till din dator.</p>
+                                <p><strong>Steg 5: Skapa en WordPress-databas:</strong></p>
+                                <p>Öppna din webbläsare och gå till phpMyAdmin genom att besöka http://localhost/phpmyadmin/.<br />
+                                Skapa en ny databas med ett namn som du väljer (till exempel &#8220;wordpress&#8221;) och ange utf8_general_ci som teckenuppsättning.</p>
+                                <p><strong>Steg 6: Packa upp WordPress-filen:</strong></p>
+                                <p>Extrahera ZIP-filen som du laddade ned i ett mapp i webbserverns rotkatalog (ofta C:\MAMP\htdocs\ eller C:\XAMPP\htdocs).</p>
+                                <p><strong>Steg 7: Konfigurera wp-config.php:</strong></p>
+                                <p>Gå till din WordPress-mapps rotkatalog och hitta filen &#8220;wp-config-sample.php.&#8221; Duplicera den och döp om den till &#8220;wp-config.php.&#8221; Öppna filen med en textredigerare.<br />
+                                Ange databasinformationen (databasnamn, användarnamn och lösenord) som du skapade i steg 5.</p>
+                                <p><strong>Steg 8: Installera WordPress lokalt:</strong></p>
+                                <p>Öppna din webbläsare och besök http://localhost/wordpress/ (om du har placerat WordPress i en underkatalog som heter &#8220;wordpress&#8221;) eller http://localhost/ (om du har placerat WordPress i rotkatalogen). Följ installationsprocessen genom att ange webbplatsens namn, användarnamn, lösenord och e-postadress.</p>
+                                <p><strong>Steg 9: Logga in och använd:</strong></p>
+                                <p>När installationen är klar, kan du logga in på din lokala WordPress-webbplats genom att besöka http://localhost/wordpress/wp-admin/ och använda de inloggningsuppgifter du angav tidigare. Nu är du redo att börja utforska och experimentera med WordPress!</p>
+                        </section>
+                        <section>
+                            <h2 style="text-align: left;">Sidor och inlägg:</h2>
+                                <hr />
+                                <p style="text-align: left;">För att skapa en ny sida eller ett nytt inlägg i WordPress behöver du först logga in på din adminsida.Gå sedan till &#8220;Sidor&#8221; om du vill skapa en ny sida eller &#8220;Inlägg&#8221; om du vill skapa ett nytt blogginlägg, klicka sedan på &#8220;lägg till ny&#8221; för att öppna redigeraren.</p>
+                                <p><img decoding="async" loading="lazy" class="size-full wp-image-557 alignleft" src="/webbutveckling1/img/wpadmin.png" alt="administratörssidan" width="200" height="211" /><img decoding="async" loading="lazy" class="size-full wp-image-550 alignleft" src="/webbutveckling1/img/addnew.jpg" alt="knappen för att lägga till nya inlägg" width="158" height="54" /></p>
+                                <p>&nbsp;</p>
+                                <p>&nbsp;</p>
+                                <p>&nbsp;</p>
+                                <p>&nbsp;</p>
+                                <p>&nbsp;</p>
+                                <p>&nbsp;</p>
+                                <p style="text-align: left;"><strong>Redigera och formatera text:</strong></p>
+                                <p style="text-align: left;">I redigeringsgränssnittet kan du skriva och formatera din text som om du använder en vanlig ordbehandlare. Använd den visuella redigeraren för att ändra textstorlek, färg, stil och skapa listor och citat. Du kan även skriva HTML och CSS med hjälp av textredigeraren. Här kan du se skillnaden på de båda redigerarna:</p>
+                                <p style="text-align: left;"><img decoding="async" loading="lazy" class="size-full wp-image-559 alignnone" src="/webbutveckling1/img/visualedit.png" alt="den visuella redigeraren" width="300" height="113" /></p>
+                                <p><img decoding="async" loading="lazy" class="size-full wp-image-560 alignnone" src="/webbutveckling1/img/textedit.png" alt="textredigeraren" width="300" height="132" /></p>
+                                <p style="text-align: left;"><strong>Lägg till media (bilder och videor):</strong></p>
+                                <p style="text-align: left;">För att lägga till bilder eller videor i ditt innehåll, använd &#8220;Lägg till media&#8221; -knappen i redigeringsgränssnittet.</p>
+                                <p style="text-align: left;"><img decoding="async" loading="lazy" class="alignnone size-full wp-image-554" src="/webbutveckling1/img/media.jpg" alt="lägg till media-knappen " width="149" height="43" /><br />
+                                Du kan ladda upp bilder och videor från din dator och infoga dem direkt i sidan eller inlägget. Dessa bilder sparas sedan i ditt mediebibliotek på WordPress. Du kan också</p>
+                                <p style="text-align: left;"><strong>Publicera eller spara:</strong></p>
+                                <p style="text-align: left;">När du är klar med att skapa och redigera ditt innehåll, kan du antingen publicera det direkt på din webbplats genom att klicka på &#8220;Publicera&#8221; -knappen eller spara det som ett utkast om du vill arbeta vidare senare.</p>
+                                <p style="text-align: left;">
+                        </section>
+                        <section>
+                            <h4 style="text-align: center;">Sådär! Nu har du en grundläggande bild av hur man skapar sig sin egen första WordPress-sida. Lycka till!</h4>
+                        </section>
+                        <!-- Lägger till en länk som öppnar utskrifts-dialogrutan vid klick. Genom denna
+                        får användaren tillgång till en utskriftsvänlig version av det innehåll den ser -->
+                            <div id="print">
+                                <a href="javascript:void(0);" onclick="window.print();" class="print-link"><img src="/webbutveckling1/img/print.png" width="20" alt="Utskriftsikon"> Skriv ut</a>
+                            </div>
+                    </section>
+                </article>   
+            </div>
+            <aside>
+                <section>
+                    <h3>Wordpress</h3>
+                        <hr>
+                        <a href="#"><img src="/webbutveckling1/img/wordpress.png" width="300" alt="En klickbar bild med wordpress.com och .org"></a>
+                        <p>Läs mer om Wordpress.com vs. Wordpress.org genom att klicka på bilden!</p>
+                </section>
+                <section>
+                    <h3>Genväg till:</h3>
+                        <hr>
+                        <ul>
+                            <li><a href="#">Källor</a></li>
+                            <li><a href="#">Internets historia och samhällspåverkan</a></li>
+                            <li><a href="#">Webbtekniker</a></li>
+                            <li><a href="#">Etik och integritet på internet</a></li>
+                        </ul>
+                </section>
+            </aside>
+        </div>
+        <footer>
+            <div>
+            <a href="#"><img src="/webbutveckling1/img/headerlogga5-2.png" height="200"
+alt="Företagslogotyp 'Ziegler' handskrivet och 'media', skrivet med en pixlig font, på suddig lila bakgrund som matchar resten av sidans färgtema"></a>
+                <p>Grundat 2023</p>
+                <p id="datum"></p>
+            </div>
+        </footer>
+    </div>
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Upp ↑</button>
+    <script src="/webbutveckling1/script.js"></script>
+    <script src="/webbutveckling1/script2.js"></script>
+    <script src="/webbutveckling1/script3.js"></script>
+        <!-- Tillagt 20241012 -->
+        <script>
+            function on() {
+                document.getElementById("overlay").style.display = "block";
+            }
+            function off() {
+                document.getElementById("overlay").style.display = "none";
+            }
+        </script>
+</body>
+</html>

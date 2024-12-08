@@ -1,0 +1,910 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-size: 16px;
+    line-height: 1.8em;
+    font-family: "Chakra Petch", sans-serif;
+    font-weight: 300;
+    color: #c9ad54;
+    justify-content: center;
+    align-items: center;
+    background-color: #0a0118;
+    column-gap: 10px;
+    row-gap: 10px;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: #0a0118;
+}
+
+/* Navigationsstilar */
+
+nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    max-width: 1200px;
+    width: 100%;
+    margin-top: 1em;
+}
+
+#menu-toggle, #burger, .mobile-home {
+    display: none;
+}
+
+.left, .right {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    max-width: 500px;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.left {
+    padding-right: 40px;
+}
+
+.homebtn img {
+    position: absolute;
+    width: 10%;
+    max-width: 100px;
+    top: 15px;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.homebtn img:hover {
+    filter: drop-shadow(0 0 0.3em #c9ad54);
+}
+
+.socials img {
+    height: 1.5rem;
+    margin: 0 1rem 0 2rem;
+}
+
+.socials img:hover {
+    filter: drop-shadow(0 0 0.3em #c9ad54);
+}
+
+.nav-link, .subnavbtn {
+    font-size: 0.8em;
+    font-weight: 500;
+    color: #ffc400;
+    text-decoration: none;
+    position: relative;
+    margin: 5px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    padding: 0.8rem 0.5rem;
+    background-color: inherit;
+    font-family: inherit;
+    align-items: center;
+}
+
+/* Hovringsanimationer */
+
+.nav-link::before,
+.nav-link::after,
+.subnavbtn::before,
+.subnavbtn::after,
+.subnav-links a::before,
+.subnav-links a::after {
+    content: "";
+    width: 1rem;
+    height: 1rem;
+    position: absolute;
+    transition: 0.7s all;
+}
+
+.nav-link::before,
+.subnavbtn::before,
+.subnav-links a::before {
+    top: -2px;
+    left: -2px;
+    border-top: 1px dotted #b923ff;
+    border-left: 1px dotted #b923ff;
+}
+
+.nav-link::after,
+.subnavbtn::after,
+.subnav-links a::after {
+    bottom: -2px;
+    right: -2px;
+    border-bottom: 1px dotted #b923ff;
+    border-right: 1px dotted #b923ff;
+}
+
+.nav-link:hover::before,
+.nav-link:hover::after,
+.subnavbtn:hover::before,
+.subnavbtn:hover::after,
+.subnav-links a:hover::before,
+.subnav-links a:hover::after {
+    width: 30%;
+    height: 2rem;
+}
+
+.subnav {
+    overflow: hidden;
+}
+
+.subnav-content {
+    display: none;
+    position: absolute;
+    flex-direction: row;
+    background-color: #0a0118;
+    width: 100%;
+    left: 0;
+    padding: 2.1rem 0 1.5rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.subnav-links a {
+    color: #ffc400;
+    text-decoration: none;
+    font-size: 0.9em;
+    position: relative;
+    margin: 0 1rem 0 0.3rem;
+    padding: 0.8rem 0.5rem;
+    align-items: center;    
+}
+
+.subnav:hover .subnav-content {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+}
+
+.menu-toggle, .menu-icon {
+    display: none;
+}
+
+.menu-icon {
+    cursor: pointer;
+    font-size: 1.5em;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    z-index: 1000;
+}
+
+
+/* Textformattering */
+
+h1, h2, h3, h4, h5, h6 {
+    color: #683eff;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 2.2em;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+h2 {
+    font-size: 1.8em;
+    text-align: center;
+    margin-bottom: 0.6em;
+    font-weight: 600;
+}
+
+h3 {
+    font-size: 1.2em;
+    margin-bottom: 0.2em;
+    font-weight: 400;
+}
+
+aside h3 {
+    max-width: 300px;
+}
+
+.essay h3 {
+    border-bottom: 2px dotted #3e2666;
+    max-width: 50%;
+    margin-bottom: 1em;
+}
+
+.essay h5 {
+    text-align: center;
+}
+
+.essay p, #presentation p {
+    margin-bottom: 1.5em;
+}
+
+.essay li {
+    display: block;
+    margin: 0 auto;
+    max-width: 80%;
+}
+
+.essay ul {
+    margin-bottom: 2em;
+}
+
+sup a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 0.7rem;
+}
+
+sup a:hover {
+    font-size: 1.2em;
+    transition: 0.3s;
+}
+
+cite {
+    text-transform: uppercase;
+}
+
+cite:hover {
+    text-decoration: underline;
+    color: #fff;
+}
+
+.tips ul {
+    list-style: none;
+}
+
+.tips ul a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.tips ul a:hover {
+    text-decoration: underline;
+}
+
+.footnotes cite a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 400;
+}
+
+.shortcut {
+    float: right;
+    text-decoration: none;
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #fff;
+}
+
+.footnotes li {
+    border-bottom: 2px dotted #0084ff3a;
+}
+
+.footnotes i, .footnotes date {
+    font-size: 0.8em;
+}
+
+#i-fn1, #a-fn1 {
+    border-top: 2px dotted #0084ff8c;
+}
+
+#i-fn20, #a-fn10 {
+    border-bottom: 2px dotted #0084ff8c
+}
+
+/* Stilar för behållare */
+
+#wrapper {
+    margin-top: 2em;
+    width: 100%;
+    height: 100%;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+}
+
+aside {
+    flex: 0 0 25%;
+    flex-direction: column;
+    align-items: center;
+}
+
+.first {
+    order: 1;
+    display: flex;
+    font-size: 0.8em;
+}
+
+.ref {
+    flex-direction: column-reverse;
+}
+
+.second {
+    order: 3;
+}
+
+article, .essay {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    order: 2;
+    min-height: 100%;
+}
+
+article, aside section, .essay {
+    border-radius: 4px;
+    width: 100%;
+    padding: 1em;
+}
+
+.music iframe {
+    display: block;
+    aspect-ratio: 16/9;
+    width: 100%;
+    margin: 0 auto;
+    border-radius: 4px;
+    border: 1px dotted #b923ff;
+    padding: 5px;
+    max-width: 350px;
+}
+
+.headshot {
+    float: inline-start;
+    width: 20%;
+    max-width: 300px;
+    margin: 0 1em 0 0;
+    padding: 5px;
+    border-radius: 4px;
+    min-width: 130px;
+    background-color: #3e2666;
+}
+
+#dl-container {
+    position: relative;
+    float:inline-end;
+    max-width: 150px;
+}
+
+.image {
+    opacity: 1;
+    width: 100%;
+    border-radius: 4px;
+}
+
+.download {
+    transition: 0.3s;
+    opacity: 0;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+#dl-container:hover .image {
+    opacity: 0.3;
+}
+
+#dl-container:hover .download {
+    opacity: 1;
+}
+
+.overlay {
+    transition: 0.5s ease;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: transparent;
+    color: #683eff;
+    font-size: 3em;
+    padding: 16px 32px;
+    z-index: 99;
+}
+
+.overlay i:hover {
+    color: #fff;
+}
+
+figure {
+    font-size: 0.8em;
+    width: 100%;
+    max-width: 250px;
+    min-width: 100px;
+    padding: 1em;
+    background-color: #ffffff15;
+    border-radius: 4px;
+    color: #ffc400;
+    line-height: 1.6em;
+}
+
+figure img {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0.5em;
+    width: 100%;
+    border-radius: 4px;
+}
+
+.sigma, .facebook, .iphone {
+    float: inline-end;
+    margin-left: 1.5em;
+    max-width: 200px;
+}
+
+.mosaic {
+    float: inline-start;
+    margin-right: 1.5em;
+}
+
+.iphone-fb {
+    display: flex;
+    float: inline-end;
+    flex-direction: column;
+    
+}
+
+.imagebox {
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    min-width: 100px;
+    max-width: 900px;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.visualisation figcaption {
+    margin-bottom: 1em;
+}
+
+.visualisation {
+    margin-bottom: 1em;
+}
+
+/* Formulärstilar */
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input[type=text], input[type=tel], input[type=email], textarea {
+    width: 85%;
+    padding: 0.8em; 
+    border-radius: 30px; 
+    box-sizing: border-box; 
+    margin-top: 6px; 
+    margin-bottom: 16px;
+    resize: vertical;
+    background-color: #140330;
+    color: #fff;
+}
+
+input:hover, textarea:hover {
+    border: 1px solid white;
+}
+
+input::placeholder, textarea::placeholder {
+    color: #fff;
+    font-family: "Chakra Petch", sans-serif;
+}
+
+input[type=submit] {
+    font-family: "Chakra Petch", sans-serif;
+    font-size: 1.2em;
+    background-color: #683eff;
+    color: white;
+    padding: 0.5em;
+    border-radius: 30px;
+    cursor: pointer;
+    width: 30%;
+    min-width: 100px;
+}
+
+input[type=submit]:hover {
+    background-color: #140330;
+}
+
+/* Sidfotstilar */
+
+footer {
+    display: flex;
+    flex-direction: column;
+    flex: 4;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #0a0118;
+    font-size: 1em;
+    margin-top: 10px;
+    align-items: center;
+    padding-bottom: 1em;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: row;
+    max-width: 1200px;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.quicklinks {
+    order: 1;
+}
+
+.footer-homebtn {
+    order: 2;
+}
+
+.contact-shortcuts {
+    order: 3;
+}
+
+.quicklinks ul {
+    list-style: none;
+    text-align: left;
+    text-transform: uppercase;
+    line-height: 1.3em;
+}
+
+.quicklinks ul a {
+    font-size: 0.8em;
+    text-decoration: none;
+    color: #ffffffdc;
+}
+
+.quicklinks ul a:hover {
+    color: #c9ad54;
+    text-decoration: underline;
+}
+
+.footer-homebtn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-homebtn img {
+    height: 100%;
+    max-height: 130px;
+    margin-top: auto;
+}
+
+.footer-homebtn img:hover {
+    filter: drop-shadow(0 0 0.3em #c9ad54);
+}
+
+.contact-shortcuts {
+    display: flex;
+    flex-flow: row wrap;
+    row-gap: 1em;
+    width: 150px;
+    height: 100%;
+    justify-content: space-evenly;
+}
+
+.contact-shortcuts img {
+    height: 100%;
+    max-height: 45px;
+    
+}
+
+.contact-shortcuts img:hover {
+    filter: drop-shadow(0 0 0.3em #c9ad54);
+}
+
+footer i {
+    font-size: 0.7em;
+}
+
+/* Stilar för mindre skärmar */
+
+@media only screen and (max-width: 980px) {
+
+    * {
+        font-size: 14px;
+        row-gap: 5px;
+        column-gap: 5px;
+    }
+
+    header {
+        width: 100%;
+    }
+
+    nav {
+        max-width: 980px;
+        justify-content: space-evenly;
+    }
+
+    .left, .right {
+        max-width: 400px;
+        width: 100%;
+        justify-content: space-around;
+    }
+
+    .right .nav-link::before,
+    .right .nav-link::after {
+        width: 0;
+        height: 0;
+    }
+
+    .right .nav-link::before,
+    .right .nav-link::after {
+        border:none;
+    }
+
+    .nav-link img {
+        height: 0.5em;
+        padding: 0 0.3em 0 0.3em;
+    }
+
+    .nav-link, .subnavbtn {
+        font-size: 1rem;
+        font-weight: 200;
+        padding: 0.4rem 0.5rem;
+    }
+
+    .nav-link::before,
+    .nav-link::after,
+    .subnavbtn::before,
+    .subnavbtn::after,
+    .subnav-links a::before,
+    .subnav-links a::after {
+        width: 10px;
+        height: 10px;
+    }
+
+    .nav-link:hover::before,
+    .nav-link:hover::after,
+    .subnavbtn:hover::before,
+    .subnavbtn:hover::after,
+    .subnav-links a:hover::before,
+    .subnav-links a:hover::after {
+        width: 30%;
+        height: 15px;
+    }
+
+    article {
+        max-width: 50%;
+    }
+
+    .essay li {
+        max-width: 90%;
+    }
+
+    footer {
+        padding: 1em;
+    }
+
+    .footer-content {
+        max-width: 980px;
+        width: 100%;
+    }
+
+    .footer-homebtn img {
+        max-height: 100px;
+    }
+
+    .footer-content h4 {
+        width: 100px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+
+    main {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .left, .right {
+        display: none;
+    }
+
+    .homebtn {
+        height: 2em;
+    }
+
+    .mobile-home {
+        display: block;
+    }
+
+    h1 {
+        margin-top: 2em;
+    }
+
+    #menu-toggle {
+        display: none;
+    }
+
+    header {
+        width: 100%;
+        height: 5em;
+        padding: 0;
+    }
+
+    /* Stilar för mobilmeny */
+
+    #burger {
+        position: absolute;
+        cursor: pointer;
+        width: 2rem;
+        height: 2rem;
+        right: 1rem;
+        top: 1rem;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+
+    #burger > span {
+        height: 3px;
+        background-color: #ffc400;
+        transition: 0.5s;
+        z-index: 999;
+    }
+
+    #menu-toggle:checked ~ #burger > span:nth-child(1) {
+        transform: translateY(20px) rotate(45deg);
+    }
+
+    #menu-toggle:checked ~ #burger > span:nth-child(2) {
+        opacity: 0;
+    }
+    #menu-toggle:checked ~ #burger > span:nth-child(3) {
+        transform: translateY(-5px) rotate(-45deg);
+    }
+
+    #menu-toggle:checked ~ nav {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: #140330;
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        right: 0;
+        transition-timing-function: cubic-bezier(10,2,3,1);
+        top: 0;
+        transition: 0.5s;
+        padding: 0;
+        margin: 0;
+    }
+
+    #menu-toggle:checked ~ nav .homebtn {
+        display: none;
+    }
+
+    #menu-toggle:checked ~ nav .left {
+        display: flex;
+        justify-content: space-evenly;
+        z-index: 1000;
+        flex-direction: column;
+        max-height: 100vh;
+        height: 100%;
+        width: 100vw;
+        position: relative;
+        transition: 0.5s;
+        padding: 0;
+        margin: 0;
+    }
+
+    .subnavbtn, .subnav-links a, .left a {
+        color: #ffc400;
+        width: 50vw;
+        text-decoration: none;
+        font-size: 1.5em;
+        margin: 0;
+    }
+
+    .subnav-links a {
+        font-size: 1em;
+    }
+
+    .left a:hover,
+    .subnavbtn:hover,
+    .subnav-links a:hover {
+        border-bottom: 2px dotted #b923ff;
+    }
+
+    .subnav:hover .subnav-content {
+        position: relative;
+        padding: 0;
+        border: 1px dotted #b923ff;
+    }
+
+    .subnav-links {
+        display: flex;
+        flex-direction: column;
+        background-color: #683eff38;
+        padding: 0;
+    }
+
+    .left .nav-link::before,
+    .left .nav-link::after,
+    .subnavbtn::before,
+    .subnavbtn::after,
+    .subnav-links a::before,
+    .subnav-links a::after {
+        display: none;
+    }
+    
+
+    .first, .ref {
+        order: 3;
+    }
+
+    input[type=text], input[type=tel], input[type=email], textarea {
+        width: 100%;
+    }
+
+    article {
+        order: 1;
+    }
+
+    aside, article, section, .first, .second {
+        width: 100%;
+        max-width: 768px;
+        padding: 1em;
+    }
+
+    aside img {
+        width: 15%;
+    }
+
+    .footer-content h4 {
+        text-align: center;
+        width: 100%;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        
+    }
+
+    .footer-homebtn {
+        order: 4;
+    }
+
+    .contact-shortcuts {
+        width: 100%;
+    }
+
+    .footer-homebtn img {
+        width: 4em;
+    }
+
+    .quicklinks ul {
+        text-align: center;
+    }
+    .quicklinks li {
+        font-size: 1.2em;
+        line-height: 1.5em;
+    }
+}
+
+@media only screen and (max-width: 481px) {
+
+/* Inga egna regler här då jag anser att de övriga stilreglerna hanterar
+responsiviteten även för de allra minsta skärmarna. */
+}

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+
+<svg
+   width="680.40002"
+   height="480"
+   viewBox="0 0 17.010001 12"
+   version="1.1"
+   id="svg1"
+   sodipodi:docname="email-alt-svgrepo-com.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1" />
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#111111"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     inkscape:deskcolor="#d1d1d1" />
+  <rect
+     x="-1.99"
+     fill="none"
+     width="20"
+     height="20"
+     id="rect1"
+     y="-4" />
+  <g
+     id="g1"
+     style="fill:#b923ff;fill-opacity:1"
+     transform="translate(-1.99,-4)">
+    <path
+       d="m 19,14.5 v -9 C 19,4.67 18.33,4 17.5,4 H 3.49 C 2.66,4 1.99,4.67 1.99,5.5 v 9 c 0,0.83 0.67,1.5 1.5,1.5 H 17.5 C 18.33,16 19,15.33 19,14.5 Z M 17.69,5.39 c 0.33,0.33 0.15,0.67 -0.03,0.84 l -4.06,3.72 3.9,4.06 c 0.12,0.14 0.2,0.36 0.06,0.51 -0.13,0.16 -0.43,0.15 -0.56,0.05 L 12.63,10.84 10.49,12.79 8.36,10.84 3.99,14.57 C 3.86,14.67 3.56,14.68 3.43,14.52 3.29,14.37 3.37,14.15 3.49,14.01 L 7.39,9.95 3.33,6.23 C 3.15,6.06 2.97,5.72 3.3,5.39 3.63,5.06 3.97,5.22 4.25,5.46 l 6.24,5.04 6.25,-5.04 c 0.28,-0.24 0.62,-0.4 0.95,-0.07 z"
+       id="path1"
+       style="fill:#b923ff;fill-opacity:1" />
+  </g>
+</svg>

@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="sv-SE">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Agila arbetsmetoder och webbutveckling. Upptäck hur SCRUM och andra agila principer kan användas för att skapa smidiga grupparbeten.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <title>Agila Webbprojekt | Scrum och andra agila utvecklingsmetoder</title>
+    <link rel="icon" type="image/x-icon" href="/img/icon-2.svg">
+</head>
+<body>
+    <header>
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" id="burger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+        <nav>
+            <div class="left">
+                <a href="index.html" class="mobile-home nav-link">HEM</a>
+                <a href="kontakt.html" class="nav-link">KONTAKT</a>
+                <div class="subnav">
+                    <div class="subnavbtn">PORTFOLIO <i class="fa fa-caret-down"></i></div>
+                    <div class="subnav-content">
+                        <div class="subnav-links">
+                            <a href="/webbutveckling1/webbtekniker.html">ZIEGLER WEBB 1.0</a>
+                            <a href="/webbutveckling2/presentation.html">ZIEGLER WEBB 2.0</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="subnav">
+                    <div class="subnavbtn">WEBB & HISTORIA <i class="fa fa-caret-down"></i></div>
+                    <div class="subnav-content">
+                        <div class="subnav-links">
+                            <a href="google.html">VÄRLDENS STÖRSTA SÖKMOTOR</a>
+                            <a href="internets-historia.html">FRÅN ARPANET TILL 5G</a>
+                            <a href="agil-projektmetod.html">AGILA WEBBPROJEKT</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a href="index.html" class="homebtn">
+                <img src="img/logo-w-text.svg" alt="En pixel art-logga av en dator med namnet Jamziewebdev framför">
+            </a>
+            <div class="right">
+                <a class="socials" href="https://discord.com/users/jamie_z"><img src="img/discord.svg" alt="discords logotyp som är i form av en handkontroll"></a>
+                <a class="socials" href="https://github.com/Jamziewebdev"><img src="img/github.svg" alt="githubs logotyp som är en katt"></a>
+                <a class="socials" href="https://www.linkedin.com/in/jamie-ziegler/"><img src="img/li-yellow-2.svg" alt="linkedins logga"></a>
+                <a class="socials" href="mailto:info@jamziewebdev.net"><img src="img/mail-puple.svg" alt="en mailikon i form av ett brev"></a>
+            </div>
+        </nav>
+    </header>
+    <div id="wrapper">
+        <h1>Agil projektmetodik</h1>
+        <main>
+            <aside class="first ref">
+                <section class="footnotes">
+                    <h4>Referenslista - i den ordning de nämns:</h4>
+                    <ol>
+                        <li id="a-fn1"><cite><a href="https://www.agilealliance.org/agile101/">Agile 101</a></cite> <i>Agile Alliance</i> (2024)<a class="shortcut" href="#a-ref1"> ↩</a></li>
+                        <li id="a-fn2"><cite><a href="https://agilemanifesto.org/">Manifesto for Agile Software Development</a></cite> <i>Agilemanigesto.org</i> (2001)<a class="shortcut" href="#a-ref2"> ↩</a></li>
+                        <li id="a-fn3"><cite><a href="https://scrumguides.org/">What is Scrum?</a></cite> <i>Scrumguide</i> (2020)<a class="shortcut" href="#a-ref3"> ↩</a></li>
+                        <li id="a-fn4"><cite><a href="https://www.thescrummaster.co.uk/wp-content/uploads/2019/09/Essential-Kanban-Condensed-v1.0.0.pdf">Essential Kanban condensed</a></cite> <i>D.J.Anderseon. A.Carmichael</i> (2016)<a class="shortcut" href="#a-ref4"> ↩</a></li>
+                        <li id="a-fn5"><cite><a href="http://www.extremeprogramming.org//">Extreme Programming: A Gentle Introduction</a></cite> <i>Don Wells</i> (2013)<a class="shortcut" href="#a-ref5"> ↩</a></li>  
+                        <li id="a-fn6"><cite><a href="https://www.atlassian.com/software/jira/guides/getting-started/introduction#what-is-jira-software">Welcome to Jira</a></cite> <i>Atlassian</i> (No date)<a class="shortcut" href="#a-ref6"> ↩</a></li>
+                        <li id="a-fn7"><cite><a href="https://trello.com/tour">What is Trello?</a></cite> <i>Atlassian</i> (No date)<a class="shortcut" href="#a-ref7"> ↩</a></li>          
+                        <li id="a-fn8"><cite><a href="https://docs.github.com/en/get-started/start-your-journey/about-github-and-git">About GitHub and Git</a></cite> <i>GitHub</i> (2024)<a class="shortcut" href="#a-ref8"> ↩</a></li>          
+                        <li id="a-fn9"><cite><a href="https://slack.com/help/articles/115004071768-What-is-Slack-">What is Slack?</a></cite> <i>Slack.com</i> (2024)<a class="shortcut" href="#a-ref9"> ↩</a></li>          
+                        <li id="a-fn10"><cite><a href="https://www.jenkins.io/">Jenkins - Build great things at any scale</a></cite> <i>Jenkins</i> (2024)<a class="shortcut" href="#a-ref10"> ↩</a></li>              
+                    </ol>
+                </section>
+            </aside>
+            <article class="essay">
+                <h2>Agila arbetsmetoder i webbutveckling</h2>
+                <section>
+                    <h3>Vad är agil projektmetod?</h3>
+                    <p>
+                        Agil projektmetodik är ett iterativt arbetsflöde som betonar flexibilitet, 
+                        samarbete och snabba leveranser av fungerande mjukvara. Till skillnad från 
+                        traditionella metoder, såsom vattenfallsmetoden, främjar agilt arbete adaptiv 
+                        planering, evolutionär utveckling, och kontinuerlig förbättring. Det tillåter 
+                        arbetsgrupper att svara snabbt på kravändringar och andra situationer som 
+                        påverkar arbetet, vilket ger gruppen möjlighet att mer regelbundet leverera 
+                        värdefulla delar av arbetet till kunden<sup><a href="#a-fn1" id="a-ref1">1</a></sup>.
+                    </p>
+                    <h5>Nyckelkomponenter i agila projekt:</h5>
+                        <ul>
+                            <li><strong>Individer och interaktioner framför processer och verktyg.</strong> Alltså att man fukuserar på människor och hur man samarbetar, snarare än att följa rigida processer. </li>
+                            <li><strong>Fungerande programvara framför omfattande dokumentation.</strong> Fokus ska ligga på att producera en utmärkt produkt, inte en utmärkt rapport.</li>
+                            <li><strong>Kundsamarbete framför kontraktsförhandling.</strong> Att arbeta nära och kontinuerligt med kunden istället för att förlita sig på oflexibla kontrakt.</li>
+                            <li><strong>Att svara på förändring framför att följa en plan</strong><sup><a href="#a-fn2" id="a-ref2">2</a></sup>. Fokus på att vara flexibel och redo att anpassa sig till förändrade förutsättningar istället för att strikt följa en fördefinierad plan som inte tar hänsyn till förändringar.</li>
+                        </ul>
+                    <h3>Vanliga agila metoder</h3>
+                    <h4>Scrum</h4>
+                    <p>
+                        Scrum är ett populärt agilt ramverk som delar upp ett projekt i korta 
+                        tidsbestämda iterationer – sprintar – som generellt sett brukar vara 
+                        mellan en och fyra veckor.
+                    </p>
+                    <h5>Nyckelkomponenter i Scrum:</h5>
+                        <ul>
+                            <li><strong>Sprintplanering: </strong>Gruppen bestämmer vad som ska göras i den kommande sprinten.</li>
+                            <li><strong>Daily Scrum: </strong>Ett kort dagligt möte där gruppmedlemmarna kan reflektera över vad de gjort, hur det har gått, och vad de ska göra nu.</li>
+                            <li><strong>Sprint Review: </strong>Ett möte där man demonstrerar färdigt arbete.</li>
+                            <li><strong>Sprint Retrospektiv: </strong>Ett möte där gruppen reflekterar över processen och identifierar eventuella förbättringsområden<sup><a href="#a-fn3" id="a-ref3">3</a></sup>.</li>
+                        </ul>
+                    <h4>Kanban</h4>
+                    <p>
+                        Kanban är en mer visuell metod för att hantera arbete, som lägger vikt vid kontinuerlig leverans, 
+                        utan att överbelasta gruppen. Med hjälp av en ’Kanbantavla’ visualiserar man arbete, begränsar 
+                        pågående arbete, och maximerar effektivitet.
+                    </p>
+                    <h5>Nyckelkomponenter i Kanban:</h5>
+                        <ul>
+                            <li><strong>Att visualisera arbetsprocessen: </strong>Kanban-tavlan ger en tydlig överblick vilket effektiviserar arbetet.</li>
+                            <li><strong>Att begränsa pågående arbete (work-in-progress, ’WIP’): </strong>Genom att lägga all fokus på några specifika uppgifter i taget ökar man kvalitén på slutresultatet.</li>
+                            <li><strong>Att ha tydliga policyer för arbetsprocessen: </strong>Genom tydliga regler och riktlinjer vet alla i gruppen alltid vad de ska göra och hur de ska hantera problem, vilket skapar snabbare processer.</li>
+                            <li><strong>Att implementera feedback-loopar: </strong>Genom kontinuerlig feedback och revidering kan man snabbare leverera en bättre produkt snabbare<sup><a href="#a-fn4" id="a-ref4">4</a></sup>.</li>
+                        </ul>
+                    <h4>Extreme Programming (XP)</h4>
+                    <p>
+                        XP fokuserar på tekniska metoder för att förbättra programvarukvalitet, och responsivitet gentemot förändringar i kundkrav. 
+                    </p>
+                    <h5>Nyckelkomponenter i XP:</h5>
+                        <ul>
+                            <li><strong>Par-programmering: </strong>En person skriver kod, medan den andre analyserar koden rad för rad medan den skrivs.</li>
+                            <li><strong>Test-driven development (TDD): </strong>Testdriven utveckling. En kort repetitiv process där programmeraren först skriver ett test, och därefter skriver precis så mycket kod som krävs för att klara testet.</li>
+                            <li><strong>Kontinuerlig integration och implementering: </strong> Genom att kontinuerligt se hur programvara integreras och fungerar kan man snabbt upptäcka fel och vara flexibel för förändringar.</li>
+                            <li><strong>Enkel design: </strong>Man lägger inte onödig tid på design.</li>
+                            <li><strong>Refaktorisering (omstrukturering) av kod: </strong>Genom systematisera och förenkla kod ökar man kodens återanvändbarhet, förenklar underhåll och förståbarhet<sup><a href="#a-fn5" id="a-ref5">5</a></sup>.</li>
+                        </ul>
+                    <h3>Verktyg för agila webbprojekt</h3>
+                    <p>
+                        Det finns ett stort antal verktyg för att stötta en grupp i den agila arbetsprocessen, allt från planeringsverktyg, kommunikation och versionshantering.
+                    </p>
+                        <h5>Några vanliga verktyg är:</h5>
+                    <ul>
+                        <li><strong>Jira - </strong>Ett omfattande projekthanteringsverktyg för bland annat planering och måluppföljning<sup><a href="#a-fn6" id="a-ref6">6</a></sup>.</li>
+                        <li><strong>Trello - </strong>Ett visuellt samarbetsverktyg som använder sig av tavlor, listor, och kort, för att organisera projekt<sup><a href="#a-fn7" id="a-ref7">7</a></sup>.</li>
+                        <li><strong>GitHub - </strong>Ett verktyg för versionskontroll, samarbete och kodhantering<sup><a href="#a-fn8" id="a-ref8">8</a></sup>.</li>
+                        <li><strong>Slack - </strong>Ett kommunikationsverktyg för realtidskommunikation och fildelning inom gruppen<sup><a href="#a-fn9" id="a-ref9">9</a></sup>.</li>
+                        <li><strong>Jenkins - </strong>En automationsserver för kontinuerlig integration och leverans<sup><a href="#a-fn10" id="a-ref10">10</a></sup>.</li>
+                    </ul>
+                    <h3>Agila webbprojekt</h3>
+                    <h5>Fördelar med att anamma agil projektmetodik i webbutveckling:</h5>
+                        <ul>
+                            <li><strong>Snabbare leveranser: </strong>Iterativ utveckling tillåter snabbare släpp av funktionell programvara.</li>
+                            <li><strong>Förbättrad kvalité: </strong>Kontinuerlig testning och integration hjälper till att tidigt identifiera och åtgärda problem.</li>
+                            <li><strong>Förbättrat samarbete: </strong>Regelbunden kommunikation leder till bättre samarbete och ’teamwork’.</li>
+                            <li><strong>Ökad flexibilitet: </strong>Förmåga att anpassa sig till kravförändringar och förändringar i marknaden.</li>
+                            <li><strong>Högre kundnöjdhet: </strong>Frekvent leverans av fungerande programvara och därmed kontinuerlig feedback ökar den slutliga kundnöjdheten<sup><a href="#a-fn11" id="a-ref11">11</a></sup>.</li>
+                        </ul>
+                    <h3>Sammanfattning</h3>
+                    <p>
+                        Agila metoder har revolutionerat webbutveckling genom att möjliggöra större flexibilitet, samarbete, och kund-centrerade approacher. 
+                        Genom att förstå och implementera dessa metoder och verktyg kan utvecklingsteam öka sin produktivitet, kvalitet och förmåga att möta 
+                        kunders behov i den snabbföränderliga webbutvecklingsvärlden.
+                    </p>
+                    <p>
+                        Under de senaste veckorna har jag haft chansen att agera SCRUM-master i min grupps agila grupparbete, och det har varit otroligt 
+                        lärorikt. Den största utmaningen har nog varit att hantera balansen mellan flexibilitet och stabilitet, särskilt i en grupp där de 
+                        olika gruppdeltagarna har olika förutsättningar, intresse och erfarenhet. Att hantera oväntade förändringar i planen, eller 
+                        att prioritera om när något visat sig inte fungera, har varit utmanande men skönt! I mina tidigare studier har jag framför allt 
+                        fått jobba utifrån vattenfallsmetoden, vilket inte har tillåtit samma flexibilitet. Tack vare våra dagliga stand-ups, sprintplaneringar 
+                        och sprint-reviews/retrospectives har det gått bra att hålla projektet på rätt spår. Särskilt tack vare verktygen i Jira och GitHub. 
+                    </p>
+                    <p>
+                        En annan viktig och lärorik aspekt i rollen som SCRUM-master har varit att försöka skapa en positiv och engagerande arbetsmiljö, 
+                        där alla kan och vill bidra. Det är inte alltid det lättaste, men jag tycker att det har gått bra. Genom att uppmuntra till 
+                        diskussion och idéutbyte, samt inofficiella möten där man kan hjälpas åt i arbetet, har gruppen kommit långt och hanterat uppgiften 
+                        väl. Jag har sett stor utveckling hos mina gruppmedlemmar, men den kanske största utvecklingen har vi gjort tillsammans, som grupp och team.
+                    </p>
+                </section>  
+            </article>
+            <aside class="second">
+                <section class="tips">
+                    <h3>Var detta intressant?</h3>
+                    <h4>Då kanske du tycker det här är spännande också!</h4>
+                    <ul>
+                        <li>Artikel: <a href="google.html">Världens största sökmotor</a></li>
+                        <li>Artikel: <a href="internets-historia.html">Från ARPAnet till 5G - Internets historia</a></li>
+                    </ul>
+                </section>
+            </aside>
+        </main>  
+    </div>
+    <footer>
+        <div class="footer-content">
+            <div class="quicklinks">
+                <h4>Genvägar:</h4>
+                <ul>
+                    <li><a href="index.html">Start</a></li>
+                    <li><a href="kontakt.html">Kontakt</a></li>
+                    <li><a href="webbutveckling1/webbtekniker.html">Ziegler Webb 1.0</a></li>
+                    <li><a href="webbutveckling2/presentation.html">Ziegler webb 2.0</a></li>
+                    <li><a href="google.html">Världens största sökmotor</a></li>
+                    <li><a href="internets-historia.html">Från ARPAnet till 5G</a></li>
+                    <li><a href="agil-projektmetod.html">Agila webbprojekt</a></li>
+                </ul>
+            </div>
+            <div class="footer-homebtn">
+                <img src="img/logo-w-text.svg" alt="En pixel art-logga av en dator med namnet Jamziewebdev framför">
+                <i>© James Ziegler 2024</i>
+            </div>
+            <div class="contact-shortcuts">
+                <h4>Kontakta mig:</h4>
+                <a href="https://discord.com/users/jamie_z"><img src="img/discord.svg" alt="discords logotyp som är i form av en handkontroll" loading="lazy"></a>
+                <a href="https://github.com/Jamziewebdev"><img src="img/github.svg" alt="githubs logotyp som är en katt" loading="lazy"></a>
+                <a href="mailto:info@jamziewebdev.net"><img src="img/mail-puple.svg" alt="en mailikon i form av ett brev" loading="lazy"></a>
+                <a href="https://www.linkedin.com/in/jamie-ziegler/"><img src="img/li-yellow-2.svg" alt="linkedins logga" loading="lazy"></a>
+            </div>
+        </div>
+    </footer>  
+</body>
+</html>

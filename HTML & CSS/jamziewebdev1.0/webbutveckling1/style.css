@@ -1,0 +1,673 @@
+/*
+Theme Name: Mitt första tema
+Author: James Ziegler
+Description: Mitt tema helt enkelt
+Version: 1.0
+License: GNU General Public License v2 or later
+Tags: Taggar här 
+Text Domain: mitt-forsta-tema
+*/
+
+/* Importera typsnitt från Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Quantico:ital,wght@0,400;1,400;1,700&display=swap');
+
+
+
+
+/* Återställ standardmarginaler och box-modell för alla element */
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+/* Tillagt 20241012 */
+#overlay {
+    position: fixed;
+    display: block; 
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 200;
+}
+
+#text {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    color: white;
+    transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    background-color: #9b80e4e1;
+    padding: 10px;
+    border-radius: 20px;
+    box-shadow: 0 0 5px #000000;
+    max-width: 550px;
+    
+}
+
+#text p {
+    font-size: 1.2em;
+}
+
+#text h1 {
+    text-align: center;
+}
+
+#buttonBox {
+    position: absolute;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    top: 115px;
+    column-gap: 10px;
+}
+
+
+#closeBtn {
+    position: absolute;
+    font-size: 20px;
+    color: white;
+    text-shadow: 2px 2px 3px #000000;
+    cursor: pointer;
+    top: 15px;
+    right: 20px;
+}
+
+#closeBtn:hover {
+    color: #594b80;
+    text-shadow: 2px 2px 3px #000000;
+}
+
+#closeBtn i {
+    font-size: 2.5rem;
+}
+
+#openBtn, #backBtn {
+    align-items: center;
+    z-index: 1;
+    font-size: 2rem;
+    color: white;
+    text-shadow: 2px 2px 3px #000000;
+    cursor: pointer;
+    padding: 5px 15px;
+    border-radius: 10px;
+    border: 1px solid #594b80;
+    box-shadow: 0 0 5px #000000;
+    background-color: #9b80e4e1;
+}
+
+#openBtn:hover, #backBtn:hover {
+    background-color: rgba(255, 255, 255, 0.884);
+    color: #594b80;
+    border: transparent;
+    text-shadow: none;
+}
+
+/* Stilar för body */
+body {
+    background-image: url(/webbutveckling1/img/bakgrund2.png);
+    /* Använder flex-layout för att centrera innehållet */
+    display: flex;
+    /* Ställer in font */
+    font-family: 'Quantico', sans-serif;
+    /* Anger grundstorleken för text på sidan för att sedan kunna använda rem för mer skalbar text */
+    font-size: 16px;
+    /* Centrerar innehållet */
+    justify-content: center;
+    /* Sätter textfärg till vit */
+    color: #ffffff;
+    /* Sätter in en mörk textskugga för ökad kontrast och läsbarhet */
+    text-shadow: 2px 2px 3px #000000;
+}
+
+/* Stilar för wrappern */
+#wrapper {   
+    /* Bakgrundsfärg för hela wrappern */
+    background-color: #ffeaf893;
+    border: 1px solid #eec3ff73;
+    /* Gör så att innehållet lägger sig i vertikala kolumner, istället för horisontella rader */
+    flex-direction: column;
+    /* Hantrerar överskottsinnehåll med radbrytning */
+    flex-wrap: wrap;
+    /* Minsta höjd för att täcka hela skärmen */
+    min-height: 100vh;
+    /* 10 pixlar padding runt hela wrappern för att ge en illusion av att allt omsluts av den */
+    padding: 10px;
+    /* Ställer in över och undre marginaler till 0 och vänster-höger till auto */
+    margin: 0 auto;
+    /* högsta tillåtna bredd */
+    max-width: 1300px;
+}
+
+/* Stilar för huvudinnehåll */
+#content {
+    /* Använder 2 delar av tillgänglig plats */
+    flex: 2;
+    /* Justera inehåll utifrån baseline */
+    justify-content: center;
+}
+
+/* Stilar för header */
+header {
+    /* Första positionen i flex-ordningen */
+    order: 1;
+    /* 10 pixlar marginal nedtill */
+    margin-bottom: 10px;
+}
+
+/* Stilar för main */
+.main {
+    /* Tredje position i flex-ordningen */
+    order: 3;
+    /* Använder flex-layout */
+    display: flex;
+    /* Hanterar överskottsinnehåll med radbrytning */
+    flex-wrap: wrap;
+    /* Bakgrundsfärg */
+    background-color: #ffe4fbf5;
+    /* Rundning i hörnen */
+    border-radius: 20px;
+    /* Justera inehållet utifrån baseline */
+    justify-content: center;
+    /* Box-skugga under alla siodr av huvud'rutan' */
+    box-shadow: 0 0 10px #561b86c5;
+    padding: 20px;
+}
+
+
+/* Gemensamma stilar för header och footer-bild */
+header img, footer img {
+    /* 10 pixlar marginal på alla sidor */
+    margin: 10px;
+
+}
+
+/* Gemensamma stilar header och footer */
+header, footer {
+
+    text-align: center;
+}
+
+
+/* Stilar för section */
+section {
+    /* 40 pixlar padding */
+    padding: 40px;
+
+
+}
+
+/* Gemensamma stillar för section, aside, och aside section */
+section, aside, aside section, article header {
+    /* Bakgrundsfärg */
+    background-color: #9b80e485;
+    /* Hörnavrundning */
+    border-radius: 40px;
+    /* Box-skuggor åt höger och nedåt */
+    box-shadow: 4px 5px 6px #561b8691,
+    /* Box-skugga på insidan för 32-effekt */
+    inset 0 0 10px #561b8691;
+    /* Streckad ytterkant */
+    border: 1px solid white;
+}
+
+aside section {
+    margin: 20px;
+    padding: 40px;
+    border-radius: 30px 10px 30px;
+}
+
+article header {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-align: center;
+    padding: 5px;
+    border-radius: 100px;
+    margin-right: 20px;
+
+}
+
+
+section {
+    margin-top: 20px;
+    margin-right: 20px;
+}
+
+/*-------------------------------------------------------------*/
+/*Styling av sidebar*/
+
+aside {
+    /* Tar upp en del av flexutrymmet */
+    flex: 1;
+    border-radius: 30px 10px 30px;
+
+}
+
+/*-------------------------------------------------------------*/
+/* Textrelaterad styling */
+
+/* styling för p-element i aside */
+aside p {
+    /* Justera texten till vänster */
+    text-align: left;
+    /* Marginal under text 20 pixlar */
+    margin-bottom: 20px;
+}
+
+/* Styling för p-element */
+p {
+    /* 5 pixlar marginal upptill */
+    margin-top: 5px;
+    /* 20 pixlar marginal nedtill */
+    margin-bottom: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+h1 {
+    font-size: 2rem;
+
+}
+
+/* Fontstorlek för h2-rubriker */
+h2 {
+    font-size: 1.75rem;
+    text-align: center;
+    padding: 10px;
+}
+
+
+
+/* Fontstorlek h3-rubriker */
+h3 {
+    font-size: 1.5rem;
+
+}
+
+/* Fontstorlek för h4-rubriker */
+h4 {
+    font-size: 1.25rem;
+}
+
+/* Marginaler för horisontell linje */
+hr {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
+/* Fontstorlek footer */
+footer p {
+    font-size: 0.9rem;
+}
+
+/* Länkstyling */
+a {
+    /* Tar bort understreck */
+    text-decoration: none;
+    /* Sätter fontfärg til vit */
+    color: white;
+}
+
+
+/* Styling vid hovring */
+section a:hover, aside a:hover {
+    /* Visa understreck */
+    text-decoration: underline;
+}
+
+/* Styling för visad länk */
+section a:visited, aside a:visited {
+    /* Sätter textfärg till stark turkos */
+    color: #00e1ff;
+}
+
+/*-------------------------------------------------------------*/
+/* Bildrelaterad styling */
+
+/* Runda hörnen på bilder och inbäddade element */
+img, iframe {
+    border-radius: 8px;
+}
+/* Marginal och box-skugga för iframe */
+iframe {
+    margin-bottom: 10px;
+    border: 1px;
+    width: 100%; 
+    min-height: 352px;
+    text-align: center;
+}
+
+aside iframe {
+    height: 352px;
+    margin-top: 10px;
+}
+
+aside img {
+    margin-top: 10px;
+}
+
+textarea {
+    height: 200px;
+}
+
+
+/* Jag hade problem med att bilder som laddats upp via wordpress inte ville justeras enbart av att använda knapparna
+för detta i den visuella redigeraren. Jag sökte mycket efter en lösning på detta i forum, och försökte ta reda på om 
+och i så fall vad jag hade gjort fel. Det visade sig dock vara ett ganska vanligt problem, och i ett forum fick jag 
+rådet att helt enkelt skapa egna regler för justering via CSS, och det fungerade utomordentligt! */
+
+
+/* Styling bilder som ska centreras */
+img.centered, .aligncenter {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* Styling bilder som ska högerjusteras */
+img.alignright {
+    padding: 4px;
+    margin: 0 0 2px 7px;
+    display: inline;
+}
+
+/* Styling bilder som ska vänsterjusteras */
+img.alignleft {
+    padding: 4px;
+    margin: 0 7px 2px 0;
+    display: inline;
+}
+
+/* Float till höger vid högerjustering */
+.alignright {
+    float: right;
+}
+
+/* Float till vänster vid vänsterjustering  */
+.alignleft {
+    float: left;
+}
+
+
+/*-------------------------------------------------------------*/
+/* Formulärstyling */
+
+/* Stilar för textinmatning och textruta */
+input[type=text], select, textarea {
+    /* Ställer in bredden på textrutan till 100% av bredden på dess behållare */
+    width: 100%;
+    /* 12 pixlar padding på alla sidor */
+    padding: 12px;
+    /* Stilar för border */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    /* Marginaler */
+    margin-top: 6px;
+    margin-bottom: 16px;
+    /* Vertikal storleksändring när fönster ändras */
+    resize: vertical;
+}
+
+/* Stilar för när man skickar in formuläret */
+input[type=submit] {
+    /* Grön bakgrundsfärg för kontrast */
+    background-color: #04AA6D;
+    /* Vit textfärg */
+    color: white;
+    /* Padding för att lämna luft runt texten i knappen */
+    padding: 12px 20px;
+    /* Border-styling */
+    border: none;
+    border-radius: 4px;
+    /* Gör muspekaren till en pekande hand när man klickar på knappen */
+    cursor: pointer;
+}
+
+/* Ändrar färg på knapp när man hovrar över den */
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+/*-------------------------------------------------------------*/
+/* Navigationsstyling*/
+
+
+/* "nav" än navigationsområdet på webbsidan, så den här stylingen gäller hela navigationsfältet */
+nav {
+    /* Sticky navigationsbar så att den ska 'följa med' när man scrollar. Detta är dels för att det alltid
+    ska vara enkelt att navigera, oavsett enhet, utan att behöva scrolla upp en massa. Särskilt användbart
+    är det eftersom jag har en hel del väldigt långa sidor. */
+    position: sticky;
+    top: 0;
+    margin-bottom: 20px;
+    /* Z-index 100 använder jag för att navbar ska hamna högst upp i 'stacken', dvs att en ligger ovanpå 
+    de saker den scrollas över */
+    z-index: 100;
+    width: 100%;
+
+}
+
+nav.sticky {
+    /* Ställer in bredden av navbar vid scroll till 100% */
+    width: 100%;
+}
+
+
+/* "nav ul" är själva listan som innehåller navigationslänkarna, i detta fall den lista med länkar 
+som wordpress själva skapar med hjälp av mina sidor */
+nav ul {
+    /* Tar bort punkter i listan */
+    list-style-type: none;
+    /* Ställer in marginal och padding */
+    padding: 25px;
+    /* Ställer in bakgrundsfärg */
+    background-color: #9b80e485;
+    border-radius: 100px;
+    border: 2px solid white;
+    text-align: center;
+    box-shadow: 2px 3px 4px #561b8691,
+    inset 0 0 20px #3c0f61dc;
+
+}
+
+/* Här styr vi stilen för de individuella listelementen */
+nav li {
+    /* Inline-block ser til att navigationslistan kan läggas bredvid varandra, istället för uppifrån och ner */
+    display: inline-block;
+    /* Positionera relativt till sitt föräldraelement */
+    position: relative;
+}
+
+/* Ändrar stilen för navigationslänkarna */
+nav a {
+    /* Textfärg vit, justera till mitten, inget understreck och en textskugga för ökad kontrast*/
+    text-align: center;
+    /* Ställer in padding för att lämna luft runt texten i knapparna */
+    padding: 14px 16px;
+    /* Rundar av kanterna på knapparna*/
+    border-radius: 30px 10px 30px;
+    box-shadow: 3px 4px 5px #471570ea,
+    inset 0 0 20px #3c0f61dc;
+    margin: 5px;
+    background-color: #ca8bee;
+    width: max-content;
+    border: 1px solid #3c105f83;
+
+}
+
+
+/* Stilar för undermenyn */
+nav ul ul {
+    /* Döljer undermenyn när man inte hovrar över den */
+    display: none;
+    /* Gör så att undersidorna staplas på varandra i menyn */
+    position: absolute;
+    /* Justerar övre kantens position i relation till huvudmenyns övre kant */
+    top: 100%;
+    /* Justerar vänsterkantens position i relation till huvudknappens vänsterkant */
+    left: 0;
+    /* Minsta bredd */
+    min-width: 200px;
+    border-radius: 10px;
+    background-color: #6b2c8f00;
+    box-shadow: none;
+    text-align: left;
+    border: none;
+
+}
+
+/* Undermenyn visas när man hovrar över rätt alternativ i huvudmenyn */
+nav ul li:hover > ul {
+    display: block;
+}
+
+/* Styling av navigationslänkar i undermenyn  */
+nav ul ul a {
+    /* Visa varje länk som ett enskilt block när undermenyn är öppen */
+    display: block;
+    /* Vänsterjustera text */
+    text-align: left;
+}
+
+/* Ändrar bakgrundsfärgen på respektive "knapp" när man hovrar över dem med muspekaren */
+nav a:hover {
+    background-color: #29293d;
+}
+
+/*-------------------------------------------------------------*/
+
+/* Knappstyling */
+#myBtn {
+    /* Döljer knappen som standard */
+    display: none;
+    /* Knappen behåller alltid samma position på sidan */
+    position: fixed;
+    /* Bottom och right bestämmer knappens marginaler till sidans botten och kant */
+    bottom: 30px;
+    right: 50px;
+    /* Bestämmer staplingsordningen i förhållande till andra objekt (knappen hamnar överst) */
+    z-index: 99;
+    font-size: 2rem;
+    font-family: 'Quantico', sans-serif;
+    color: white;
+    text-shadow: 2px 2px 3px #000000;
+    /* Tar bort fokusramen när knappen är aktiv */
+    outline: none;
+    /* Ändrar muspekaren till en pekare istället för pil */
+    cursor: pointer;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 10px 30px 10px;
+    border: 2px solid white;
+    box-shadow: 3px 4px 5px #471570ea,
+    inset 0 0 20px #3c0f61dc;
+    background-color: #ca8bee;
+}
+/* Styling för hovring */
+#myBtn:hover {
+    background-color: #29293d;
+}
+
+
+/* Stilar för mindre skärmar */
+@media screen and (max-width: 600px) {
+
+    
+    #buttonBox {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        row-gap: 5px;
+        margin-left: auto;
+        margin-right: auto;
+        top: 20px;
+    }
+
+    /* Döljer största och minsta logotypen */
+    #headerImage1, #headerImage3 {
+        display: none;
+    }
+
+    /* Gör den mellanstora bilden synlig */
+    #headerImage2 {
+        display: block;
+        width: auto;
+        height: 100px;
+        padding-bottom: 30px;
+    }
+
+
+    /* Ställer in wrapperns höjd och bredd till 100% av viewport */
+    #wrapper {
+        height: 100vh;
+        width: 100vw;
+    }
+    /* Ställer in textstorlek till samma som basstorlek, centrerar innehållet, tar bort padding och lägger till radbrytning */
+    body, .main, #content {
+        font-size: 1rem; /*Justera textstorlek för mindre skärmar */
+        justify-content: center;
+        padding-top: 10px;
+        padding-left: 20px;
+        word-wrap: break-word;
+    }
+    /* Fontstilar */
+    h1, h2, h3 {
+        font-size: 1.2rem;
+    }
+    p {
+        font-size: 0.8rem;
+    }
+/* Ställer in huvudinnehållets bredd till 90% av viewport, justerar marginaler, padding och centrerar */
+    article section, article header {
+        width: 90vw;
+        margin-top: 10px;
+        margin-bottom: 5px;
+        padding: 10px;
+    }
+
+    section section {
+        width: auto;
+        justify-content: center;
+        margin: 10px;
+    }
+    /* Justerar textstorlek för scrollknappen */
+    #myBtn {
+        font-size: 1rem;
+    }
+    /* Ställer in sidebars bredd till 90% av viewport eftersom den nu är i samma kolumn som huvudinnehållet, justerar marginaler och centrerar */
+    aside {
+        width: 90vw;
+        margin: 5px;
+        justify-content: center;
+    }
+
+    /* Justerar bredd på navigationslänkar */
+    nav a {
+        width: 100%;
+    }
+    /* Justerar marginalerna på navigationsknappar */
+    nav li {
+        margin: 20px 10px;
+    }
+
+    /* Färminskar bilder på mindre skärmar */
+    img.centered, .aligncenter, img.alignright, img.alignleft, .alignright, .alignleft, .alignnone, img.alignnone, img {
+        max-width: 200px;
+        height: auto;
+    }
+    /* Förminskar iframes på mindre skärmar */
+    iframe {
+        width: 80vw;
+        height: auto;
+    }
+}

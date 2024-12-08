@@ -1,0 +1,39 @@
+/* Återställ textfärger och textskuggor */
+body, p, h1, h2, h3 {
+    color: #000; /* Svart textfärg */
+    text-shadow: none; /* Ingen textskugga */
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 12px;
+}
+
+/* Ta bort skuggor, borders och filter på element */
+section, article, .main, #wrapper, aside, aside section, header, footer, #myBtn {
+    box-shadow: none;
+    border: none;
+    filter: none;
+    text-shadow: none;
+}
+
+/* Tar bort bakgrundsbild */
+body {
+    background-image: none;
+}
+
+/* döljer navbar, sidhuvud, sidfot och inbäddade element */
+nav, header, footer, iframe {
+    display: none;
+}
+
+/* Ändrar storlek på bilder */
+img, img.centered, img.alignright, img.alignleft {
+    max-width: 150px;
+    height: auto;
+}
+
+#myBtn, button {
+    display: none;
+    border: none;
+    color: #00000000;
+    text-shadow: none;
+    
+}
