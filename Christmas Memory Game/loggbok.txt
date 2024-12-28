@@ -1,0 +1,21 @@
+22 December 2024
+
+Hämtat alla filer, läst igenom existerande kod.
+Implementerat klickfunktion för att vända kort, testat funktionen.
+Skapat tidväljare (dropdown) och startknapp.
+
+26 December 2024
+
+Implementerat förbättringar för klickfuntkioner, bl.a. lagt till vilkor som gör att 
+matchade par ligger kvar uppvända och inte längre lyssnar efter klick.
+Skapat timer-funktion och lagt in nedräknare i UI.
+Bytt bilder för att snygga till UI.
+Skapat funktion för att räkna matchade par.
+
+27 December 2024
+
+Sorterat/justerat ordning i kod för att öka läsbarhet.
+Skapat snö-effekt med JS och CSS.
+Ändrat generell design av hela sidan för att passa ett jultema genom t.ex. byte av färger
+och tillägg i form av en polgagris-border.
+Slutgiltigt test så att allt fungerar utan problem, åtgärdat en saknad parentes.
